@@ -2,12 +2,8 @@ params.flag = false
 
 process flag_param{
   input:
-  val flag from params.flag
+  val flag from Channel.from(params.flag)
 
   exec:
-  if(flag){
-    println "Flag was true"
-  }else{
-    println "Flag was false"
-  }
+  println "======$flag======"
 }

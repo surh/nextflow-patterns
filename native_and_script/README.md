@@ -1,6 +1,6 @@
 # Problem
-I want to run both native code and script code in the
-same process.
+I want a process to run some native code *before* running a script
+and use the variables from the native code in the script.
 
 # Execute
 Run with:

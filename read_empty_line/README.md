@@ -15,3 +15,7 @@ Run with:
 ```bash
 nextflow run read_empty_line.nf
 ```
+and compare with:
+```bash
+nextflow run fails_read_empty_line.nf
+```

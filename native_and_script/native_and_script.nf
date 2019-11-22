@@ -1,14 +1,19 @@
-nums = [1,2,3,4]
-process test_mult_code{
-	input:
-	val num from nums
+process native_and_script{
+  publishDir "output",
+    saveAs: {"${num}.txt"}
 
-	exec:
-	println num
+  input:
+  val num from Channel.from(1,2,3,4)
+  
+  output:
+  path ".command.out"
 
-	shell:
-	'''
-	echo "!{num}"
-	date
-	'''
+  exec:
+  println num
+  num2 = num + 1
+
+  script:
+  """
+  echo "Number: $num, Number + 1 = $num2"
+  """
 }

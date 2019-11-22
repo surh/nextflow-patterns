@@ -7,3 +7,8 @@ Run with:
 ```bash
 nextflow run native_and_script.sh
 ```
+
+And check the results with:
+```bash
+more output/*.txt
+```

@@ -2,7 +2,10 @@
 process publish_subdir{
   publishDir 'output',
     pattern: 'dir/subdir',
-    saveAs: {'results'}
+    saveAs: {"$x"}
+
+  input:
+  val x from Channel.from("a", "b", "c")
   
   output:
   path "dir/subdir"
@@ -10,6 +13,7 @@ process publish_subdir{
   """
   mkdir dir
   mkdir dir/subdir
+  touch dir/subdir/$x
   """
 
 }

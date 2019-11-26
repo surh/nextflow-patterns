@@ -13,3 +13,8 @@ Create input with:
 mkdir input
 touch input/s1_a0_b0_R1.fastq input/s1_a0_b0_R2.fastq input/s2_c0_d0_R1.fastq input/s2_c0_d0_R2.fastq
 ```
+
+Execute with:
+```bash
+nextflow run id_from_file_pair.nf
+```
